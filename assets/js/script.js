@@ -7,7 +7,6 @@ $("#submitBtn").on("click" , function(){
 
   localStorage.getItem(userInput.value);
 })
-
 $(document).ready(() => {
     
     const doSearch = () => {
