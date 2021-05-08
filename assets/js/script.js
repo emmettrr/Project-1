@@ -1,5 +1,12 @@
 var youtube = 'AIzaSyApNNupOOVS4LUnhTyhx-GHPvL6amnc02c'
+var userInput = document.getElementById("userInput");
+var submitBtn = document.getElementById("submitBtn");
 
+$("#submitBtn").on("click" , function(){
+  localStorage.setItem("text" , userInput.value);
+
+  localStorage.getItem(userInput.value);
+})
 $(document).ready(() => {
     
     const doSearch = () => {
@@ -40,9 +47,7 @@ $(document).ready(() => {
 
     doSearch();
   });
-
-
-
+  
 const Http = new XMLHttpRequest();
 const url='https://fly.sportsdata.io/v3/mma/scores/json/Fighters?key=acfe100fb13b4b7cbe65184bfbc1f0f1';
 Http.open("GET", url);
