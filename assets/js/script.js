@@ -1,4 +1,4 @@
-var youtube = 'AIzaSyApNNupOOVS4LUnhTyhx-GHPvL6amnc02c'
+var youtube = 'AIzaSyAr031YDIiLF3eBObxe03kuBL5aLwA-8XQ'
 var userInput = document.getElementById("userInput");
 var submitBtn = document.getElementById("submitBtn");
 
@@ -12,7 +12,7 @@ $(document).ready(() => {
     
     const doSearch = () => {
       let searchQuery = $('.search input:text').val();
-      let url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyApNNupOOVS4LUnhTyhx-GHPvL6amnc02c&q=' + searchQuery;
+      let url = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyAr031YDIiLF3eBObxe03kuBL5aLwA-8XQ&q=' + searchQuery;
       $.ajax({
         url: url,
         method: 'GET',
