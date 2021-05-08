@@ -1,4 +1,3 @@
-var client_id = "MjE4NjE5NTB8MTYyMDM0MjIxNC43MTMwOTUy"
 var youtube = 'AIzaSyApNNupOOVS4LUnhTyhx-GHPvL6amnc02c'
 
 $(document).ready(() => {
@@ -42,16 +41,13 @@ $(document).ready(() => {
     doSearch();
   });
 
-    fetch("https://api-nba-v1.p.rapidapi.com/seasons/", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "14af4307abmsh85e3dd249e791b4p11cf20jsn4930524d16b9",
-		"x-rapidapi-host": "api-nba-v1.p.rapidapi.com"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
+
+
+const Http = new XMLHttpRequest();
+const url='https://fly.sportsdata.io/v3/mma/scores/json/Fighters?key=acfe100fb13b4b7cbe65184bfbc1f0f1';
+Http.open("GET", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText)
+}
