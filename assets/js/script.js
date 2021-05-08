@@ -1,4 +1,12 @@
 var youtube = 'AIzaSyApNNupOOVS4LUnhTyhx-GHPvL6amnc02c'
+var userInput = document.getElementById("userInput");
+var submitBtn = document.getElementById("submitBtn");
+
+
+$("#submitBtn").on("click" , function(){
+  localStorage.setItem("text" , userInput.value);
+  localStorage.getItem(userInput.value);
+})
 
 $(document).ready(() => {
     
