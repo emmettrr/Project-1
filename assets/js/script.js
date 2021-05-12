@@ -56,12 +56,27 @@ $("#submitBtn").on("click", function () {
 
           var lName = data[i].LastName;
           lastName.append(lName);
-          // var nName =
-          // var bDate =
-          // var ht =
-          // var wt =
-          // var ws =
-          // var ls =
+
+          var nName = data[i].Nickname;
+          nickName.append(nName);
+
+          var bDate = data[i].BirthDate;
+          var bDateFix = Math.floor(2021 - bDate);
+          birthDate.append(bDateFix);
+
+          var ht = data[i].Height;
+          var htFix = Math.floor(ht / 12);
+          height.append(htFix);
+
+          var wt = data[i].Weight;
+          weight.append(wt);
+
+          var ws = data[i].Wins;
+          wins.append(ws);
+
+          var ls = data[i].Losses;
+          losses.append(ls);
+
           mmaList.append(mmaFighter);
         } else {
           console.log("No matching results!");
