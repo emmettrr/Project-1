@@ -2,16 +2,54 @@ var youtube = "AIzaSyAr031YDIiLF3eBObxe03kuBL5aLwA-8XQ";
 var userInput = document.getElementById("userInput");
 var submitBtn = document.getElementById("submitBtn");
 
-$("#submitBtn").on("click", function () {
+$("#submitBtn").on("click", function() {
+  
+  fetch(url)
+  .then (function(response) {
+    return response.json();
+  })
+  .then (function(data) {
+    for (let i = 0; i < data.length; i++) {
+      var mmaFighter = document.createElement('div')
+      var firstName = document.createElement('p');
+      var lastName = document.createElement('p');
+      var nickName = document.createElement('p');
+      var birthDate = document.createElement('p');
+      var height = document.createElement('p');
+      var weight = document.createElement('p');
+      var wins = document.createElement('p');
+      var losses = document.createElement('p');
+  
+      mmaFighter.append(firstName, lastName, nickName, birthDate, height, weight, wins, losses);
+      mmaFighter.classList.add('card');
+      firstName.textContent = "First Name: ";
+      lastName.textContent = "Last Name: ";
+      nickName.textContent = "Nick Name: ";
+      birthDate.textContent = "Age: ";
+      height.textContent = "Height: ";
+      weight.textContent = "Weight: ";
+      wins.textContent = "Wins: ";
+      losses.textContent = "Losses: ";
+      
+      var fName = data.FirstName[i];
+      fName.append(firstName);
+  
+      // var lName = 
+      // var nName = 
+      // var bDate = 
+      // var ht = 
+      // var wt = 
+      // var ws = 
+      // var ls = 
+  
+    }
+  });
+
   localStorage.setItem("text", userInput.value);
   localStorage.getItem(userInput.value);
+  
 });
 
-$("#submitBtn").on("click" , function(){
-  localStorage.setItem("text" , userInput.value);
-
-  localStorage.getItem(userInput.value);
-})
 $(document).ready(() => {
   const doSearch = () => {
     let searchQuery = $(".search input:text").val();
@@ -67,3 +105,4 @@ Http.send();
 Http.onreadystatechange = (e) => {
   console.log(Http.responseText);
 };
+
