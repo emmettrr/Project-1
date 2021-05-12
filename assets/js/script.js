@@ -21,14 +21,14 @@ $("#submitBtn").on("click", function () {
           console.log(data[i].LastName);
 
           var mmaFighter = document.createElement("div");
-          var firstName = document.createElement("p");
-          var lastName = document.createElement("p");
-          var nickName = document.createElement("p");
-          var birthDate = document.createElement("p");
-          var height = document.createElement("p");
-          var weight = document.createElement("p");
-          var wins = document.createElement("p");
-          var losses = document.createElement("p");
+          var firstName = document.createElement("li");
+          var lastName = document.createElement("li");
+          var nickName = document.createElement("li");
+          var birthDate = document.createElement("li");
+          var height = document.createElement("li");
+          var weight = document.createElement("li");
+          var wins = document.createElement("li");
+          var losses = document.createElement("li");
 
           mmaFighter.append(
             firstName,
@@ -40,7 +40,7 @@ $("#submitBtn").on("click", function () {
             wins,
             losses
           );
-          mmaFighter.classList.add("card" + "blue-gray" + "darken-1");
+          mmaFighter.classList.add("card-content");
           firstName.textContent = "First Name: ";
           lastName.textContent = "Last Name: ";
           nickName.textContent = "Nick Name: ";
