@@ -2,52 +2,72 @@ var youtube = "AIzaSyAr031YDIiLF3eBObxe03kuBL5aLwA-8XQ";
 var userInput = document.getElementById("userInput");
 var submitBtn = document.getElementById("submitBtn");
 
-$("#submitBtn").on("click", function() {
-  
+$("#submitBtn").on("click", function () {
   fetch(url)
-  .then (function(response) {
-    return response.json();
-  })
-  .then (function(data) {
-    for (let i = 0; i < data.length; i++) {
-      var mmaFighter = document.createElement('div')
-      var firstName = document.createElement('p');
-      var lastName = document.createElement('p');
-      var nickName = document.createElement('p');
-      var birthDate = document.createElement('p');
-      var height = document.createElement('p');
-      var weight = document.createElement('p');
-      var wins = document.createElement('p');
-      var losses = document.createElement('p');
-  
-      mmaFighter.append(firstName, lastName, nickName, birthDate, height, weight, wins, losses);
-      mmaFighter.classList.add('card');
-      firstName.textContent = "First Name: ";
-      lastName.textContent = "Last Name: ";
-      nickName.textContent = "Nick Name: ";
-      birthDate.textContent = "Age: ";
-      height.textContent = "Height: ";
-      weight.textContent = "Weight: ";
-      wins.textContent = "Wins: ";
-      losses.textContent = "Losses: ";
-      
-      var fName = data.FirstName[i];
-      fName.append(firstName);
-  
-      // var lName = 
-      // var nName = 
-      // var bDate = 
-      // var ht = 
-      // var wt = 
-      // var ws = 
-      // var ls = 
-  
-    }
-  });
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      for (let i = 0; i < 20; i++) {
+        var first = data[i].FirstName.toLowerCase();
+        var userChoice = userInput.value.toLowerCase();
+        if (first.includes(userChoice)) {
+          console.log(data[i].FirstName);
+          console.log(data[i].LastName);
+
+          var mmaFighter = document.createElement("div");
+          var firstName = document.createElement("p");
+          var lastName = document.createElement("p");
+          var nickName = document.createElement("p");
+          var birthDate = document.createElement("p");
+          var height = document.createElement("p");
+          var weight = document.createElement("p");
+          var wins = document.createElement("p");
+          var losses = document.createElement("p");
+          var user = document.getElementById("userInput");
+
+          mmaFighter.append(
+            firstName,
+            lastName,
+            nickName,
+            birthDate,
+            height,
+            weight,
+            wins,
+            losses,
+            user
+          );
+          mmaFighter.classList.add("card");
+          firstName.textContent = "First Name: ";
+          lastName.textContent = "Last Name: ";
+          nickName.textContent = "Nick Name: ";
+          birthDate.textContent = "Age: ";
+          height.textContent = "Height: ";
+          weight.textContent = "Weight: ";
+          wins.textContent = "Wins: ";
+          losses.textContent = "Losses: ";
+
+          var fName = data[i].FirstName;
+          firstName.append(fName);
+          $("body").append(firstName);
+
+          var lName = data[i].LastName;
+          lastName.append(lName);
+          $("body").append(lastName);
+          // var nName =
+          // var bDate =
+          // var ht =
+          // var wt =
+          // var ws =
+          // var ls =
+        } else {
+          console.log("No matching results!");
+        }
+      }
+    });
 
   localStorage.setItem("text", userInput.value);
   localStorage.getItem(userInput.value);
-  
 });
 
 $(document).ready(() => {
@@ -103,6 +123,5 @@ Http.open("GET", url);
 Http.send();
 
 Http.onreadystatechange = (e) => {
-  console.log(Http.responseText);
+  // console.log(Http.responseText);
 };
-
