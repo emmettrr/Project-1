@@ -8,7 +8,7 @@ $("#submitBtn").on("click", function () {
       return response.json();
     })
     .then(function (data) {
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < 500; i++) {
         var first = data[i].FirstName.toLowerCase();
         var last = data[i].LastName.toLowerCase();
         var userChoice = userInput.value.toLowerCase();
