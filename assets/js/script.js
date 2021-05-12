@@ -10,8 +10,13 @@ $("#submitBtn").on("click", function () {
     .then(function (data) {
       for (let i = 0; i < 20; i++) {
         var first = data[i].FirstName.toLowerCase();
+        var last = data[i].LastName.toLowerCase();
         var userChoice = userInput.value.toLowerCase();
-        if (first.includes(userChoice)) {
+        if (
+          (first.includes(userChoice) && last.includes(userChoice)) ||
+          first.includes(userChoice) ||
+          last.includes(userChoice)
+        ) {
           console.log(data[i].FirstName);
           console.log(data[i].LastName);
 
@@ -24,7 +29,6 @@ $("#submitBtn").on("click", function () {
           var weight = document.createElement("p");
           var wins = document.createElement("p");
           var losses = document.createElement("p");
-          var user = document.getElementById("userInput");
 
           mmaFighter.append(
             firstName,
@@ -34,10 +38,9 @@ $("#submitBtn").on("click", function () {
             height,
             weight,
             wins,
-            losses,
-            user
+            losses
           );
-          mmaFighter.classList.add("card");
+          mmaFighter.classList.add("card" + "blue-gray" + "darken-1");
           firstName.textContent = "First Name: ";
           lastName.textContent = "Last Name: ";
           nickName.textContent = "Nick Name: ";
@@ -46,20 +49,20 @@ $("#submitBtn").on("click", function () {
           weight.textContent = "Weight: ";
           wins.textContent = "Wins: ";
           losses.textContent = "Losses: ";
+          mmaFighter;
 
           var fName = data[i].FirstName;
           firstName.append(fName);
-          $("body").append(firstName);
 
           var lName = data[i].LastName;
           lastName.append(lName);
-          $("body").append(lastName);
           // var nName =
           // var bDate =
           // var ht =
           // var wt =
           // var ws =
           // var ls =
+          mmaList.append(mmaFighter);
         } else {
           console.log("No matching results!");
         }
