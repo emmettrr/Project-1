@@ -19,7 +19,8 @@ i {
     background-color: rgb(0, 0, 0);
 }
 
-.page-footer {
-    background-color: rgb(126,53,53);
-}
+footer{
+    color: black;
+    font-weight: bold;
+    }
 
