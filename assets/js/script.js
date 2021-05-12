@@ -12,6 +12,12 @@ $("#submitBtn").on("click", function () {
         var first = data[i].FirstName.toLowerCase();
         var last = data[i].LastName.toLowerCase();
         var userChoice = userInput.value.toLowerCase();
+
+        if (userChoice.length === 0) {
+          alert("select something!");
+          return;
+        }
+
         if (
           (first.includes(userChoice) && last.includes(userChoice)) ||
           first.includes(userChoice) ||
@@ -60,7 +66,7 @@ $("#submitBtn").on("click", function () {
           var nName = data[i].Nickname;
           nickName.append(nName);
 
-          var bDate = data[i].BirthDate;
+          var bDate = data[i].BirthDate.substring(0, 4);
           var bDateFix = Math.floor(2021 - bDate);
           birthDate.append(bDateFix);
 
