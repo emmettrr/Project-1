@@ -12,6 +12,12 @@ $("#submitBtn").on("click", function () {
         var first = data[i].FirstName.toLowerCase();
         var last = data[i].LastName.toLowerCase();
         var userChoice = userInput.value.toLowerCase();
+
+        if (userChoice.length === 0) {
+          alert("select something!");
+          return;
+        }
+
         if (
           (first.includes(userChoice) && last.includes(userChoice)) ||
           first.includes(userChoice) ||
