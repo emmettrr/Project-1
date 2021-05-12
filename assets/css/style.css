@@ -1,0 +1,25 @@
+* {
+    background-color: rgb(71, 71, 71);
+}
+
+h1 {
+    font-family: "Black Ops One";
+
+}
+.nav-wrapper {
+    background-color: rgb(126, 53, 53);
+    color: black;
+} 
+
+a {
+    background-color: rgb(126, 53, 53);
+}
+
+i {
+    background-color: rgb(0, 0, 0);
+}
+
+.page-footer {
+    background-color: rgb(126,53,53);
+}
+
