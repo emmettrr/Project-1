@@ -8,7 +8,13 @@ $("#submitBtn").on("click", function () {
       return response.json();
     })
     .then(function (data) {
-      for (let i = 0; i < 500; i++) {
+      $(
+        ".bg-primary.video-play.embed-responsive.embed-responsive-21by9"
+      ).toggle();
+      $(".search").toggle();
+      $(".display-1").toggle();
+      $("#mmaList").empty();
+      for (let i = 0; i < 1500; i++) {
         var first = data[i].FirstName.toLowerCase();
         var last = data[i].LastName.toLowerCase();
         var userChoice = userInput.value.toLowerCase();
@@ -17,7 +23,7 @@ $("#submitBtn").on("click", function () {
         var userChoiceLast = userChoice.split(' ').slice(-1).join(' '); // removes the first word, leaving the last name
 
         if (userChoice.length === 0) {
-          alert("select something!");
+          $("#dialog").dialog();
           return;
         }
 
@@ -159,51 +165,55 @@ $("#submitBtn").on("click", function () {
   localStorage.getItem(userInput.value);
 });
 
-// $(document).ready(() => {
-//   const doSearch = () => {
-//     let searchQuery = $(".search input:text").val();
-//     let url =
-//       "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyAr031YDIiLF3eBObxe03kuBL5aLwA-8XQ&q=" +
-//       searchQuery;
-//     $.ajax({
-//       url: url,
-//       method: "GET",
-//       success: (result) => {
-//         $(".video-play").text("");
-//         $(".video-play").append(
-//           `<iframe class="embed-responsive-item" src=https://www.youtube.com/embed/${result.items[0].id.videoId} allowFullScreen title='youtube player' />`
-//         );
-//         // populateSuggestions(result.items.slice(1, 10));
-//       },
-//       error: (err, response) => {
-//         console.log(err.responseText);
-//         $(".video-play").text(err.responseText);
-//       },
-//     });
-//   };
+$(document).ready(function () {
+  $(".parallax").parallax();
+});
 
-  // const populateSuggestions = (videos) => {
-  //   $(".suggest-list").text("");
-  //   for (video of videos) {
-  //     let videoElement = `<a href="#" class="suggested" data-videoId=${video.id.videoId} ><img src=${video.snippet.thumbnails.medium.url} /></a>`;
-  //     $(".suggest-list").append(videoElement);
-  //   }
+$(document).ready(() => {
+  const doSearch = () => {
+    let searchQuery = $(".search input:text").val();
+    let url =
+      "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyAr031YDIiLF3eBObxe03kuBL5aLwA-8XQ&q=" +
+      searchQuery;
+    $.ajax({
+      url: url,
+      method: "GET",
+      success: (result) => {
+        $(".video-play").text("");
+        $(".video-play").append(
+          `<iframe class="embed-responsive-item" src=https://www.youtube.com/embed/${result.items[0].id.videoId} allowFullScreen title='youtube player' />`
+        );
+        populateSuggestions(result.items.slice(1, 10));
+      },
+      error: (err, response) => {
+        console.log(err.responseText);
+        $(".video-play").text(err.responseText);
+      },
+    });
+  };
 
-  //   $("a.suggested").click((e) => {
-  //     let videoId = e.currentTarget.dataset.videoId;
-  //     $(".video-play").text("");
-  //     $(".video-play").append(
-  //       `<iframe class="embed-responsive-item" src=https://www.youtube.com/embed/${videoId} allowFullScreen title='youtube player' />`
-  //     );
-  //   });
-  // };
+  const populateSuggestions = (videos) => {
+    $(".suggest-list").text("");
+    for (video of videos) {
+      let videoElement = `<a href="#" class="suggested" data-videoId=${video.id.videoId} ><img src=${video.snippet.thumbnails.medium.url} /></a>`;
+      $(".suggest-list").append(videoElement);
+    }
 
-//   $("button:button").click(() => {
-//     doSearch();
-//   });
+    $("a.suggested").click((e) => {
+      let videoId = e.currentTarget.dataset.videoId;
+      $(".video-play").text("");
+      $(".video-play").append(
+        `<iframe class="embed-responsive-item" src=https://www.youtube.com/embed/${videoId} allowFullScreen title='youtube player' />`
+      );
+    });
+  };
 
-//   doSearch();
-// });
+  $("button:button").click(() => {
+    doSearch();
+  });
+
+  doSearch();
+});
 
 const Http = new XMLHttpRequest();
 const url =
@@ -212,5 +222,5 @@ Http.open("GET", url);
 Http.send();
 
 Http.onreadystatechange = (e) => {
-  // console.log(Http.responseText);
+  console.log(Http.responseText);
 };
