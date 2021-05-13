@@ -95,6 +95,10 @@ $("#submitBtn").on("click", function () {
   localStorage.getItem(userInput.value);
 });
 
+$(document).ready(function () {
+  $(".parallax").parallax();
+});
+
 $(document).ready(() => {
   const doSearch = () => {
     let searchQuery = $(".search input:text").val();

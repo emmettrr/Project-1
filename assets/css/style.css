@@ -1,5 +1,5 @@
 * {
-  background-color: rgb(70, 70, 70);
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -28,23 +28,21 @@ h2 {
   font-size: 35px;
 }
 
-.nav-wrapper {
-  background-color: rgb(192, 31, 31);
-  color: rgb(255, 254, 254);
-}
-
 .container {
   display: flex;
   align-items: right;
 }
 
+.card-content {
+  background-color: #a491916a;
+}
+
 #mmaList {
-  border: rgb(255, 255, 255) solid 2px;
+  border: rgb(179, 174, 174) solid 2px;
 }
 
 li {
   list-style: none;
-  color: white;
   font-size: 16px;
 }
 
