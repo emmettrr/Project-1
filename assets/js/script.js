@@ -8,7 +8,8 @@ $("#submitBtn").on("click", function () {
       return response.json();
     })
     .then(function (data) {
-      $(".bg-primary.video-play.embed-responsive.embed-responsive-21by9").toggle()
+      $(".bg-primary.video-play.embed-responsive.embed-responsive-21by9").toggle();
+      $(".search").toggle();
       $("#mmaList").empty();
       for (let i = 0; i < 1500; i++) {
         var first = data[i].FirstName.toLowerCase();
