@@ -8,6 +8,7 @@ $("#submitBtn").on("click", function () {
       return response.json();
     })
     .then(function (data) {
+      $(".bg-primary.video-play.embed-responsive.embed-responsive-21by9").toggle()
       $("#mmaList").empty();
       for (let i = 0; i < 1500; i++) {
         var first = data[i].FirstName.toLowerCase();
@@ -95,11 +96,10 @@ $("#submitBtn").on("click", function () {
   localStorage.getItem(userInput.value);
 });
 
-$("#submitBtn").click(function() {
-  $(".bg-primary.video-play.embed-responsive.embed-responsive-21by9").toggle();
+
 $(document).ready(function () {
   $(".parallax").parallax();
-});
+})
 
 $(document).ready(() => {
   const doSearch = () => {
@@ -154,5 +154,5 @@ Http.open("GET", url);
 Http.send();
 
 Http.onreadystatechange = (e) => {
-  // console.log(Http.responseText);
-};
+  console.log(Http.responseText);
+}
