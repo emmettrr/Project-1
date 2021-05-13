@@ -9,7 +9,7 @@ $("#submitBtn").on("click", function () {
     })
     .then(function (data) {
       $("#mmaList").empty();
-      for (let i = 0; i < 500; i++) {
+      for (let i = 0; i < 1500; i++) {
         var first = data[i].FirstName.toLowerCase();
         var last = data[i].LastName.toLowerCase();
         var userChoice = userInput.value.toLowerCase();
@@ -97,6 +97,8 @@ $("#submitBtn").on("click", function () {
 
 $("#submitBtn").click(function() {
   $(".bg-primary.video-play.embed-responsive.embed-responsive-21by9").toggle();
+$(document).ready(function () {
+  $(".parallax").parallax();
 });
 
 $(document).ready(() => {
