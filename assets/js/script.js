@@ -87,7 +87,8 @@ $("#submitBtn").on("click", function () {
           weightClass.append(wclass);
 
           var ht = data[i].Height;
-          var htFix = Math.floor(ht / 12);
+          var htFix = Math.abs(ht / 12); 
+          htFix = htFix.toFixed(2);
           height.append(htFix);
 
           var wt = data[i].Weight;
