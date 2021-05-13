@@ -118,7 +118,6 @@ $(document).ready(() => {
         $(".video-play").append(
           `<iframe class="embed-responsive-item" src=https://www.youtube.com/embed/${result.items[0].id.videoId} allowFullScreen title='youtube player' />`
         );
-        populateSuggestions(result.items.slice(1, 10));
       },
       error: (err, response) => {
         console.log(err.responseText);
@@ -126,22 +125,7 @@ $(document).ready(() => {
       },
     });
   };
-
-  const populateSuggestions = (videos) => {
-    $(".suggest-list").text("");
-    for (video of videos) {
-      let videoElement = `<a href="#" class="suggested" data-videoId=${video.id.videoId} ><img src=${video.snippet.thumbnails.medium.url} /></a>`;
-      $(".suggest-list").append(videoElement);
-    }
-
-    $("a.suggested").click((e) => {
-      let videoId = e.currentTarget.dataset.videoId;
-      $(".video-play").text("");
-      $(".video-play").append(
-        `<iframe class="embed-responsive-item" src=https://www.youtube.com/embed/${videoId} allowFullScreen title='youtube player' />`
-      );
-    });
-  };
+  
 
   $("button:button").click(() => {
     doSearch();
