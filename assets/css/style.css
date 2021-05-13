@@ -57,3 +57,10 @@ i {
 .footer-copyright {
   background-color: rgb(192, 31, 31);
 }
+
+#submitBtn {
+  background-color: black;
+}
+#submitBtn:hover {
+  background-color: rgb(51, 36, 182);
+}
