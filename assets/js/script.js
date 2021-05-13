@@ -9,7 +9,7 @@ $("#submitBtn").on("click", function () {
     })
     .then(function (data) {
       $("#mmaList").empty();
-      for (let i = 0; i < 500; i++) {
+      for (let i = 0; i < 1500; i++) {
         var first = data[i].FirstName.toLowerCase();
         var last = data[i].LastName.toLowerCase();
         var userChoice = userInput.value.toLowerCase();
