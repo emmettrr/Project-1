@@ -8,6 +8,7 @@ $("#submitBtn").on("click", function () {
       return response.json();
     })
     .then(function (data) {
+      $("#mmaList").empty();
       for (let i = 0; i < 500; i++) {
         var first = data[i].FirstName.toLowerCase();
         var last = data[i].LastName.toLowerCase();
