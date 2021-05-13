@@ -95,6 +95,8 @@ $("#submitBtn").on("click", function () {
   localStorage.getItem(userInput.value);
 });
 
+$("#submitBtn").click(function() {
+  $(".bg-primary.video-play.embed-responsive.embed-responsive-21by9").toggle();
 $(document).ready(function () {
   $(".parallax").parallax();
 });
