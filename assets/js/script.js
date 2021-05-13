@@ -8,7 +8,9 @@ $("#submitBtn").on("click", function () {
       return response.json();
     })
     .then(function (data) {
-      $(".bg-primary.video-play.embed-responsive.embed-responsive-21by9").toggle();
+      $(
+        ".bg-primary.video-play.embed-responsive.embed-responsive-21by9"
+      ).toggle();
       $(".search").toggle();
       $("#mmaList").empty();
       for (let i = 0; i < 1500; i++) {
@@ -17,7 +19,7 @@ $("#submitBtn").on("click", function () {
         var userChoice = userInput.value.toLowerCase();
 
         if (userChoice.length === 0) {
-          alert("select something!");
+          $("#dialog").dialog();
           return;
         }
 
@@ -97,10 +99,9 @@ $("#submitBtn").on("click", function () {
   localStorage.getItem(userInput.value);
 });
 
-
 $(document).ready(function () {
   $(".parallax").parallax();
-})
+});
 
 $(document).ready(() => {
   const doSearch = () => {
@@ -156,4 +157,4 @@ Http.send();
 
 Http.onreadystatechange = (e) => {
   console.log(Http.responseText);
-}
+};
