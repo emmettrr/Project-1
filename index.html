@@ -1,63 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MMA Fighter Search</title>
 
     <!-- Materialize Links -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"
+    />
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <!-- Materialize Styling -->
-    <link rel = “stylesheet” href = “https://fonts.googleapis.com/icon?family=Material+Icons”>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link rel = “stylesheet” href =
+    “https://fonts.googleapis.com/icon?family=Material+Icons”>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
+      rel="stylesheet"
+    />
     <!--Let browser know website is optimized for mobile-->
-    <meta name = “viewport” content = “width = device-width, initial-scale = 1”>
-         
+    <meta
+      name="“viewport”"
+      content="“width"
+      ="device-width,"
+      initial-scale="1”"
+    />
+
     <!-- Local CSS Files  -->
-    <link type="text/css" rel="stylesheet" href="./assets/css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-  <header>
-    <h1>Fighter Statistics</h1>
-  </header>
-  <main>
-  <div class="container video-page">
-    <h2 class="display-1">Search your fighter!</h2>
-    <div class="search">
-      <input id="userInput" type="text" placeholder = "search" value="">
-      <button id="submitBtn" type="button" class="btn btn-primary">Submit</button>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="bg-primary video-play embed-responsive embed-responsive-21by9" hidden>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="./assets/css/materialize.min.css"
+      media="screen,projection"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Fighter Statistics</h1>
+    </header>
+    <main>
+      <div class="container video-page">
+        <h2 class="display-1">Search your fighter!</h2>
+        <div class="search">
+          <input id="userInput" type="text" placeholder="search" value="" />
+          <button id="submitBtn" type="button" class="btn btn-primary">
+            Submit
+          </button>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div
+              class="
+                bg-primary
+                video-play
+                embed-responsive embed-responsive-21by9
+              "
+              hidden
+            ></div>
           </div>
         </div>
       </div>
-    </div>
-    
-    <div id="dialog" title="Alert!">
-      <p>Please type a name of a fighter.</p>
-    </div>
-    
-    <div class="parallax-container">
-      <div class="parallax"><img src="./assets/images/background.jpg"></div>
-    </div>
-  <div class="row">
-      <div class="col s12 m6">
-        <div class="card">
-          <div id="mmaList"></div>
+
+      <div id="dialog" title="Alert!">
+        <p>Please type a name of a fighter.</p>
+      </div>
+
+      <div class="parallax-container">
+        <div class="parallax"><img src="./assets/images/background.jpg" /></div>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div id="mmaList"></div>
+          </div>
         </div>
       </div>
-  </div>
+    </main>
 
     <footer class="footer-copyright">
       <div class="container">
@@ -66,9 +98,9 @@
   </footer>
     
 
-<!--when using materialize jQuery has to be added to the head of the document-->
-<script type="text/javascript" src="./assets/js/materialize.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="./assets/js/script.js"></script>
-</body>
+    <!--when using materialize jQuery has to be added to the head of the document-->
+    <script type="text/javascript" src="./assets/js/materialize.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
 </html>
