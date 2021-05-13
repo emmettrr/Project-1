@@ -27,7 +27,11 @@ $("#submitBtn").on("click", function () {
           return;
         }
 
-        if (first.includes(userChoiceFirst) && last.includes(userChoiceLast)) {
+        if (
+          (first.includes(userChoiceFirst) && last.includes(userChoiceLast)) ||
+          first.includes(userChoice) ||
+          last.includes(userChoice)
+        ) {
           console.log("First and Last Names:", userChoice);
           console.log(data[i].FirstName);
           console.log(data[i].LastName);
@@ -85,74 +89,6 @@ $("#submitBtn").on("click", function () {
           var ht = data[i].Height;
           var htFix = Math.floor(ht / 12);
           height.append(htFix);
-
-          var wt = data[i].Weight;
-          weight.append(wt);
-
-          var ws = data[i].Wins;
-          wins.append(ws);
-
-          var ls = data[i].Losses;
-          losses.append(ls);
-
-          mmaList.append(mmaFighter);
-        } else if (first.includes(userChoice) || last.includes(userChoice)) {
-          console.log(data[i].FirstName);
-          console.log(data[i].LastName);
-
-          var mmaFighter = document.createElement("div");
-          var firstName = document.createElement("li");
-          var lastName = document.createElement("li");
-          var weightClass = document.createElement("li");
-          var nickName = document.createElement("li");
-          var birthDate = document.createElement("li");
-          var height = document.createElement("li");
-          var weight = document.createElement("li");
-          var wins = document.createElement("li");
-          var losses = document.createElement("li");
-
-          mmaFighter.append(
-            firstName,
-            lastName,
-            nickName,
-            birthDate,
-            weightClass,
-            height,
-            weight,
-            wins,
-            losses
-          );
-          mmaFighter.classList.add("card-content");
-          firstName.textContent = "First Name: ";
-          lastName.textContent = "Last Name: ";
-          nickName.textContent = "Nick Name: ";
-          birthDate.textContent = "Age: ";
-          weightClass.textContent = "Weight Class: ";
-          height.textContent = "Height: ";
-          weight.textContent = "Weight: ";
-          wins.textContent = "Wins: ";
-          losses.textContent = "Losses: ";
-          mmaFighter;
-
-          var fName = data[i].FirstName;
-          firstName.append(fName);
-
-          var lName = data[i].LastName;
-          lastName.append(lName);
-
-          var nName = data[i].Nickname;
-          nickName.append(nName);
-
-          var bDate = data[i].BirthDate.substring(0, 4);
-          var bDateFix = Math.floor(2021 - bDate);
-          birthDate.append(bDateFix);
-
-          var ht = data[i].Height;
-          var htFix = Math.floor(ht / 12);
-          height.append(htFix);
-
-          var wclass = data[i].WeightClass;
-          weightClass.append(wclass);
 
           var wt = data[i].Weight;
           weight.append(wt);
