@@ -65,3 +65,7 @@ i {
 #submitBtn:hover {
   background-color: rgb(51, 36, 182);
 }
+
+input {
+  font-family: "Black Ops One";
+}
