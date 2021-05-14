@@ -92,6 +92,7 @@ $("#submitBtn").on("click", function () {
           height.append(htFix);
 
           var wt = data[i].Weight;
+          wt = wt.textContent = wt + "lbs"
           weight.append(wt);
 
           var ws = data[i].Wins;
