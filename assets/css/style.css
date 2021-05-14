@@ -31,13 +31,11 @@ h2 {
 }
 
 .container {
-  /* display: flex;
-  align-items: right; */
   height: 20%;
   width: 20%;
 }
 
-.card .card-content {
+.card-content {
   background-color: white;
   border-style: double;
   border-color: rgb(10, 8, 116);
@@ -82,3 +80,7 @@ i {
 input {
   font-family: "Black Ops One";
 }
+
+/* .search {
+  text-align: center;
+} */
