@@ -22,6 +22,12 @@ $("#submitBtn").on("click", function () {
         var userChoiceFirst = userChoice.split(" ").slice(0, -1).join(" "); //removes the last word, leaving first name
         var userChoiceLast = userChoice.split(" ").slice(-1).join(" "); // removes the first word, leaving the last name
 
+        var id = data[i].FighterId;
+        var uniqueNames = [];
+        $.each(id, function(i, el){
+        if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+});
+
         if (userChoice.length === 0) {
           $("#dialog").dialog();
           return;
