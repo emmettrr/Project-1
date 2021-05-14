@@ -31,13 +31,8 @@ h1 {
 }
 
 .container {
-<<<<<<< HEAD
-  height: 20%;
-  width: 20%;
-=======
   display: flex;
   align-items: right;
->>>>>>> ee36a4b7cfb643f973524d8bb3a2d45e60faf3a3
 }
 
 .card-content {
