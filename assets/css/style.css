@@ -35,7 +35,7 @@ h1 {
   align-items: right;
 }
 
-.card .card-content {
+.card-content {
   background-color: white;
   border-style: double;
   border-color: rgb(10, 8, 116);
