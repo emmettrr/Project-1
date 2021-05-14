@@ -10,6 +10,7 @@ h1 {
   text-shadow: 6px 6px 0px rgb(10, 8, 116);
   mix-blend-mode: screen;
   animation: fadeIn 2.2s linear forwards;
+  text-align: center;
 }
 
 @keyframes fadeIn {
@@ -26,11 +27,14 @@ h2 {
   font-family: "Black Ops One";
   color: rgb(0, 0, 0);
   font-size: 35px;
+  text-align: center;
 }
 
 .container {
-  display: flex;
-  align-items: right;
+  /* display: flex;
+  align-items: right; */
+  height: 20%;
+  width: 20%;
 }
 
 .card-content {
