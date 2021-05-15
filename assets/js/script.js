@@ -95,6 +95,7 @@ $("#submitBtn").on("click", function () {
           var ht = data[i].Height;
           var htFix = Math.abs(ht / 12); 
           htFix = htFix.toFixed(2);
+          htFix = htFix.textContent = htFix + "ft"
           height.append(htFix);
 
           var wt = data[i].Weight;
