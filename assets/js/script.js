@@ -127,7 +127,7 @@ $(document).ready(() => {
   const doSearch = () => {
     let searchQuery = $(".search input:text").val();
     let url =
-      "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyBTYvbGTQ39oQSWsSJjAhnzeFsqTx29wNM=" +
+      "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyCzCMvNGOZ-Q1FLEUnwws0Mw5v5zzx8u1U=&q?" +
       searchQuery;
     $.ajax({
       url: url,
