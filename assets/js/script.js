@@ -92,10 +92,11 @@ $("#submitBtn").on("click", function () {
           var wclass = data[i].WeightClass;
           weightClass.append(wclass);
 
-          var ht = data[i].Height;
-          var htFix = Math.abs(ht / 12); 
-          htFix = htFix.toFixed(2);
-          height.append(htFix);
+          var Height = data[i].Height;
+          var feet = Math.floor(Height / 12);
+          var inches = Height - (feet * 12);
+          ht = Height.textContent = feet + "'" + inches + '"';
+          height.append(ht);
 
           var wt = data[i].Weight;
           wt = wt.textContent = wt + "lbs"
