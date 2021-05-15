@@ -30,6 +30,11 @@ Deployed GitHub Page: https://github.com/emmettrr/project-1
 
 ## Screen capture examples
 
-![example-1](https://emmettrr.github.io/project-1/assets/images/screenshot-homepage.png)
-![example-1](https://emmettrr.github.io/project-1/assets/images/screenshot-search.png)
-![example-1](https://emmettrr.github.io/project-1/assets/images/screenshot-search-results.png)
+Homepage
+![https://emmettrr.github.io/project-1/assets/images/screenshot-homepage.png](https://emmettrr.github.io/project-1/assets/images/screenshot-homepage.png)
+
+Search
+![https://emmettrr.github.io/project-1/assets/images/screenshot-search.png](https://emmettrr.github.io/project-1/assets/images/screenshot-search.png)
+
+Search Results
+![https://emmettrr.github.io/project-1/assets/images/screenshot-search-results.png](https://emmettrr.github.io/project-1/assets/images/screenshot-search-results.png)
