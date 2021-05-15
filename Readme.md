@@ -1,6 +1,6 @@
 # Unit 7: Project 1 - Fighter Statistics website
 
-Coding Camels: Emmett Rushin, Ted Keim, Stephen Obie, Robert George
+Coding Camels: Emmett Rushin, Ted Keim, Stephen Obie, and Robert George
 
 ## Overview
 
