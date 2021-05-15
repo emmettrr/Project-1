@@ -24,9 +24,9 @@ $("#submitBtn").on("click", function () {
 
         var id = data[i].FighterId;
         var uniqueNames = [];
-        $.each(id, function(i, el){
-        if($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
-});
+        $.each(id, function (i, el) {
+          if ($.inArray(el, uniqueNames) === -1) uniqueNames.push(el);
+        });
 
         if (userChoice.length === 0) {
           $("#dialog").dialog();
@@ -94,12 +94,12 @@ $("#submitBtn").on("click", function () {
 
           var Height = data[i].Height;
           var feet = Math.floor(Height / 12);
-          var inches = Height - (feet * 12);
+          var inches = Height - feet * 12;
           ht = Height.textContent = feet + "'" + inches + '"';
           height.append(ht);
 
           var wt = data[i].Weight;
-          wt = wt.textContent = wt + "lbs"
+          wt = wt.textContent = wt + "lbs";
           weight.append(wt);
 
           var ws = data[i].Wins;
@@ -127,7 +127,7 @@ $(document).ready(() => {
   const doSearch = () => {
     let searchQuery = $(".search input:text").val();
     let url =
-      "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyBFH_pwavyMQ3rC845v4Lii1Pc7nRs9xqU=" +
+      "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&key=AIzaSyBTYvbGTQ39oQSWsSJjAhnzeFsqTx29wNM=" +
       searchQuery;
     $.ajax({
       url: url,
